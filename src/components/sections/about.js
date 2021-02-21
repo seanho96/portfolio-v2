@@ -132,7 +132,14 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'Typescript', 'React', 'Gatsby', 'Styled Components', 'WordPress'];
+  const skills = [
+    'JavaScript (ES6+)',
+    'Typescript',
+    'React',
+    'Gatsby',
+    'Styled Components',
+    'WordPress',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -145,14 +152,14 @@ const About = () => {
 
             <p>
               I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              applications, or anything in between. My goal is to build products for social good,
+              particularly in economic empowerment and helping the underpriveleged.
             </p>
 
             <p>
               I'm a self taught developer whom graduated from the{' '}
-              <a href="https://www.bath.ac.uk">University of Bath</a> with a Chemical Engineering Degree.
-              Chemical engineer turned developer?
+              <a href="https://www.bath.ac.uk">University of Bath</a> with a Chemical Engineering
+              Degree. Chemical engineer turned developer? That's right!
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
