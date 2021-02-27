@@ -11,4 +11,4 @@ company: ''
 showInProjects: true
 ---
 
-A minimal clone of the classic snake game.
+A minimal version of the classic snake game with a score counter.
