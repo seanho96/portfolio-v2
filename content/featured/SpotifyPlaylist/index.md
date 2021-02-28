@@ -3,7 +3,6 @@ date: '2'
 title: 'Spotify Playlists'
 cover: './spotify.png'
 github: 'http://github.com/seanho96/spotify-clone'
-external: 'https://spotify-profile.herokuapp.com/'
 tech:
   - React
   - React Context
