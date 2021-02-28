@@ -6,6 +6,7 @@ import {
   IconExternal,
   IconFolder,
   IconFork,
+  IconGif,
   IconGitHub,
   IconInstagram,
   IconLinkedin,
@@ -29,6 +30,8 @@ const Icon = ({ name }) => {
       return <IconFolder />;
     case 'Fork':
       return <IconFork />;
+    case 'Gif':
+      return <IconGif />;
     case 'GitHub':
       return <IconGitHub />;
     case 'Instagram':

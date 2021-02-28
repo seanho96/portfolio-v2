@@ -3,6 +3,7 @@ date: '2'
 title: 'Spotify Playlists'
 cover: './spotify.png'
 github: 'http://github.com/seanho96/spotify-clone'
+gif: 'Spotify'
 tech:
   - React
   - React Context

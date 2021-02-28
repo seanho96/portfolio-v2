@@ -3,6 +3,7 @@ date: '3'
 title: 'Trello Clone'
 cover: './trello.png'
 github: 'http://github.com/seanho96/trelloclone'
+gif: 'Trello'
 external: 'https://seanho96.github.io/trelloclone'
 tech:
   - React

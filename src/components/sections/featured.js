@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -5,6 +6,10 @@ import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
+import { Modal } from '@components';
+import Spotify from './spotify.gif';
+import Trello from './trello.gif';
+import BudgetApp from './budgetapp.gif';
 
 const StyledProject = styled.div`
   display: grid;
@@ -247,6 +252,9 @@ const StyledProject = styled.div`
 `;
 
 const Featured = () => {
+  const [is_open, setOpen] = React.useState(false);
+  const [gif_name, setGifName] = React.useState(null);
+
   const data = useStaticQuery(graphql`
     query {
       featured: allMarkdownRemark(
@@ -266,6 +274,7 @@ const Featured = () => {
               }
               tech
               github
+              gif
               external
             }
             html
@@ -274,6 +283,17 @@ const Featured = () => {
       }
     }
   `);
+
+  const handleGifSelection = item => {
+    if (item === 'Spotify') {
+      setGifName(Spotify);
+    } else if (item === 'Trello') {
+      setGifName(Trello);
+    } else {
+      setGifName(BudgetApp);
+    }
+    setOpen(true);
+  };
 
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
 
@@ -294,7 +314,7 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, gif, cover } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -310,8 +330,12 @@ const Featured = () => {
                       ))}
                     </ul>
                   )}
-
                   <div className="project-links">
+                    {gif && (
+                      <a aria-label={gif + ' Link'} onClick={() => handleGifSelection(gif)}>
+                        <Icon name="Gif" />
+                      </a>
+                    )}
                     {github && (
                       <a href={github} aria-label="GitHub Link">
                         <Icon name="GitHub" />
@@ -334,6 +358,7 @@ const Featured = () => {
             );
           })}
       </div>
+      <Modal closeModal={() => setOpen(false)} is_open={is_open} img_src={gif_name} />
     </section>
   );
 };
