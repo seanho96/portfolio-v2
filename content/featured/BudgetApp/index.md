@@ -2,8 +2,9 @@
 date: '1'
 title: 'Budget App'
 cover: './budget-app.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+github: 'https://github.com/seanho96/budgetapp'
+gif: 'BudgetApp'
+external: 'https://seanho96.github.io/budgetapp'
 tech:
   - JS
   - SCSS
