@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/seanho96/portfolio-v2/main/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/seanho96/portfolio-v2/master/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   sean-ho.studio
