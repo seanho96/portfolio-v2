@@ -5,7 +5,7 @@ export { default as Nav } from './nav';
 export { default as Menu } from './menu';
 export { default as Side } from './side';
 export { default as Social } from './social';
-export { default as Email } from './email';
+export { default as Blog } from './blog';
 export { default as Footer } from './footer';
 export { default as Modal } from './modal';
 export { default as Hero } from './sections/hero';

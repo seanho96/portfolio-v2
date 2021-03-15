@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-// import { email } from '@config';
 import { Side } from '@components';
 
 const StyledLinkWrapper = styled.div`
@@ -42,19 +41,18 @@ const StyledLink = styled(Link)`
         20 0,
       auto;
   }
-`
+`;
 
-const Email = ({ isHome }) => (
+const Blog = ({ isHome }) => (
   <Side isHome={isHome} orientation="right">
     <StyledLinkWrapper>
-      <StyledLink to='/blog'>My Blog &rarr;</StyledLink>
-      {/* <a href={`mailto:${email}`}>{email}</a> */}
+      <StyledLink to="/blog">My Blog &rarr;</StyledLink>
     </StyledLinkWrapper>
   </Side>
 );
 
-Email.propTypes = {
+Blog.propTypes = {
   isHome: PropTypes.bool,
 };
 
-export default Email;
+export default Blog;
