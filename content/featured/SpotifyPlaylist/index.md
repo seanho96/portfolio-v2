@@ -6,7 +6,7 @@ github: 'http://github.com/seanho96/spotify-clone'
 gif: 'Spotify'
 tech:
   - React
-  - React Context
+  - Context
   - Material UI
   - Spotify Web API
 showInProjects: true

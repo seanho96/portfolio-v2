@@ -6,7 +6,7 @@ external: 'https://seanho96.github.io/webappsolution'
 tech:
   - React
   - ReactRouter
-company: ''
+company: 'Home'
 showInProjects: true
 ---
 

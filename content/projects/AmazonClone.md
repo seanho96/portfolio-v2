@@ -7,7 +7,7 @@ tech:
   - React
   - Firebase
   - Context
-company: ''
+company: 'Home'
 showInProjects: true
 ---
 

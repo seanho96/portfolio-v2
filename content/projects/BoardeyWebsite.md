@@ -7,7 +7,7 @@ tech:
   - JavaScript
   - CSS
   - HTML
-company: ''
+company: 'Home'
 showInProjects: true
 ---
 
