@@ -7,9 +7,9 @@ import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { Modal } from '@components';
-import Spotify from './spotify.gif';
-import Trello from './trello.gif';
-import BudgetApp from './budgetapp.gif';
+import Spotify from '@images/spotify.gif';
+import Trello from '@images/trello.gif';
+import BudgetApp from '@images/budgetapp.gif';
 
 const StyledProject = styled.div`
   display: grid;
