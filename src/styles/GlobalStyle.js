@@ -61,8 +61,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--slate);
-    color: var(--lightest-slate);
+    background-color: var(--green);
+    color: var(--dark-navy);
   }
 
   body {
