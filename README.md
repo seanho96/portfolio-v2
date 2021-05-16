@@ -2,7 +2,7 @@
   <img alt="Logo" src="https://raw.githubusercontent.com/seanho96/portfolio-v2/master/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
-  sean-ho.studio
+  <a href="https://sean-ho.studio" target="_blank">sean-ho.studio</a>
 </h1>
 <p align="center">
   The second iteration of <a href="https://sean-ho.studio" target="_blank">my personal website</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
