@@ -15,7 +15,7 @@ This has actually taken me so much longer than it should have to just sit down a
 
 ## How It Started
 
-In 2019/2020, I was working as a Process Engineer in an oil & gas consulting firm. Due to the nature of consulting firms and their project-based deliverables, the busyness of the workforce is dependent on the number of active projects that the company has secured at any given time. It isn't uncommon for project teams to have a little of "down" time in between projects or just certain months where project deliverabes were on hold.
+In 2019/2020, I was working as a Process Engineer in an oil & gas consulting firm. Due to the nature of consulting firms and their project-based deliverables, the busyness of the workforce is dependent on the number of active projects that the company has secured at any given time. It isn't uncommon for project teams to have a little of "down" time in between projects or just certain months where project deliverables were on hold.
 
 My situation at around Feb 2020 was a little similar to that described above and I had about a week or two with little to no work at the time. As a result, I thought that it would have been useful to take that time to learn something new and useful. Programming had always been something that I had wanted to learn but could never really stuck to it. I tried it once during my university days to learn HTML & CSS from [Codeacademy](https://www.codecademy.com/) but that was rather short-lived. Even during my process engineering role, there were a lot of task that were carried out in Excel that would've benefitted from automation. I did attemp to dip my toes with a little scriptting with Excel VBA via the recording macro tool and modifying the scripts from there.
 
