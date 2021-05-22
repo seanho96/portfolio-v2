@@ -151,7 +151,7 @@ const About = () => {
             <p>
               I enjoy creating things that live on the internet, whether that be websites,
               applications, or anything in between. My goal is to build products for social good,
-              particularly in economic empowerment and helping the underpriveleged.
+              particularly in economic empowerment and helping the underprivileged.
             </p>
 
             <p>
