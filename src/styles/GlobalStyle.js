@@ -64,6 +64,16 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--green);
     color: var(--dark-navy);
   }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--navy)
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 8px;
+  }
 
   body {
     margin: 0;
