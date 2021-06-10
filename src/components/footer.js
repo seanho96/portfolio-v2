@@ -66,7 +66,7 @@ const StyledCredit = styled.div`
   }
 `;
 
-const Footer = ({ blog }) => (
+const Footer = ({ home }) => (
   // const [githubInfo, setGitHubInfo] = useState({
   //   stars: null,
   //   forks: null,
@@ -101,7 +101,7 @@ const Footer = ({ blog }) => (
           ))}
       </ul>
     </StyledSocialLinks>
-    {!blog ? (
+    {home ? (
       <StyledCredit tabindex="-1">
         <a href="https://github.com/bchiang7/v4">
           <div>Inspired by Brittany Chiang</div>

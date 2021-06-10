@@ -45,7 +45,7 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location, blog }) => {
+const Layout = ({ children, location, home }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
@@ -102,7 +102,7 @@ const Layout = ({ children, location, blog }) => {
 
               <div id="content">
                 {children}
-                <Footer blog={blog} />
+                <Footer home={home} />
               </div>
             </StyledContent>
           )}

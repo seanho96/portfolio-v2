@@ -8,7 +8,7 @@ const StyledMainContainer = styled.main`
 `;
 
 const IndexPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout location={location} home>
     <StyledMainContainer className="fillHeight">
       <Hero />
       <About />

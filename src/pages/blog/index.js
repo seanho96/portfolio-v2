@@ -121,7 +121,7 @@ const BlogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location} blog>
+    <Layout location={location}>
       <Helmet title="Blog" />
 
       <StyledMainContainer>
