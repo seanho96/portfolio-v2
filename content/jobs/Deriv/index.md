@@ -7,6 +7,8 @@ range: 'October 2020 - Present'
 url: 'https://www.deriv.com'
 ---
 
+- Managed release pipelines for one of our major products
+- Managed translation development flow of Deriv.com
 - Engineered and maintained new features of Deriv's customer-facing static site &
   web app using React, Gatsby, MobX and our in-house Deriv API
 - Interfaced with QA engineers and UI/UX designers to ensure thoughtful and
