@@ -1,7 +1,7 @@
 ---
 title: 'What I Learned At Work Today #1'
 description: Individual Component Contexts
-date: '2021-05-15'
+date: '2021-05-25'
 draft: false
 slug: '/blog/individual-component-contexts'
 tags:
