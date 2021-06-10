@@ -38,7 +38,7 @@ const PostTemplate = ({ data, location }) => {
   const { title, date, tags } = frontmatter;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} blog>
       <Helmet title={title} />
 
       <StyledPostContainer>

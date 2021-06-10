@@ -121,15 +121,13 @@ const BlogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} blog>
       <Helmet title="Blog" />
 
       <StyledMainContainer>
         <header>
           <h1 className="big-heading">Blog</h1>
-          <p className="subtitle">
-              a collection of some of my learnings
-          </p>
+          <p className="subtitle">a collection of some of my learnings</p>
         </header>
 
         <StyledGrid>
@@ -159,9 +157,7 @@ const BlogPage = ({ location, data }) => {
                         <StyledTags>
                           {tags.map((tag, i) => (
                             <li key={i}>
-                              <Link
-                                to={`/blog/tags/${kebabCase(tag)}/`}
-                                className="inline-link">
+                              <Link to={`/blog/tags/${kebabCase(tag)}/`} className="inline-link">
                                 #{tag}
                               </Link>
                             </li>
@@ -184,7 +180,7 @@ BlogPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default BlogPage
+export default BlogPage;
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
