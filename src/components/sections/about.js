@@ -133,8 +133,10 @@ const About = () => {
   const skills = [
     'JavaScript (ES6+)',
     'Typescript',
-    'React',
+    'Next',
     'Gatsby',
+    'React',
+    'Formik',
     'Styled Components',
     'WordPress',
   ];
