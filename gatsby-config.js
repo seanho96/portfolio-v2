@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'Sean Ho',
     description:
-      'Sean Ho is a front end developer based in Kuala Lumpur, MY focusing on building (and occasionally designing) Fintech websites, applications, and everything in between.',
-    siteUrl: 'https://sean-ho.studio', // No trailing slash allowed!
+      'Sean Ho is a senior front end developer passionate about building beautiful, responsive websites and applications that engages and captivates its users.',
+    siteUrl: 'https://sean-ho.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [

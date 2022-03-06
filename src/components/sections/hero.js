@@ -53,14 +53,14 @@ const Hero = () => {
   const two = <h2 className="big-heading">Sean Ho.</h2>;
   const three = (
     <h3 className="big-heading">
-      I solve problems
+      I build things
       <br /> with tech.
     </h3>
   );
   const four = (
     <p>
-      I'm a front end developer based in Kuala Lumpur focusing on building (and occasionally
-      designing) Fintech websites, applications, and everything in between.
+      I'm a senior front end developer passionate about building beautiful, responsive websites and
+      applications that engages and captivates its users.
     </p>
   );
   const five = (
