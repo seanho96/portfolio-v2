@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -125,10 +125,34 @@ const StyledLinks = styled.div`
   }
 `;
 
+const LogoContainer = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+`;
+
+const CommandBar = styled.span`
+  ${({ theme }) => theme.mixins.flexCenter};
+  color: var(--slate);
+  margin-left: 2.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--slate);
+  padding: 0.2rem 0.8rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  // Remove when we can programatically trigger the command bar
+  user-select: none;
+
+  /* :hover {
+    opacity: 1;
+    cursor: pointer;
+  } */
+`;
+
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
+
+  // const CommandBarRef = useRef(null);
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50);
@@ -159,9 +183,23 @@ const Nav = ({ isHome }) => {
             <CSSTransition classNames={fadeClass} timeout={timeout}>
               <div className="logo" tabIndex="-1">
                 {isHome ? (
-                  <a href="/" aria-label="home">
-                    <IconLogo />
-                  </a>
+                  <LogoContainer>
+                    <a href="/" aria-label="home">
+                      <IconLogo />
+                    </a>
+                    <CommandBar
+                    // TODO: to add back when we can programatically trigger the command bar
+                    // ref={CommandBarRef}
+                    // onClick={() => {
+                    //   CommandBarRef.current.dispatchEvent(
+                    //     new KeyboardEvent('keypress', { key: 'k', metaKey: true }),
+                    //   );
+                    // }}
+                    >
+                      <span>⌘</span>
+                      <span>K</span>
+                    </CommandBar>
+                  </LogoContainer>
                 ) : (
                   <Link to="/" aria-label="home">
                     <IconLogo />

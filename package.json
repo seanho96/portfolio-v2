@@ -20,6 +20,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@reonomy/react-confetti-explosion": "^1.0.32",
     "animejs": "^3.2.1",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.9.1",
@@ -40,6 +41,7 @@
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-transformer-remark": "^5.9.0",
     "gatsby-transformer-sharp": "^4.9.0",
+    "keysho": "^1.2.8",
     "lodash": "^4.17.21",
     "prismjs": "^1.27.0",
     "prop-types": "^15.8.1",
