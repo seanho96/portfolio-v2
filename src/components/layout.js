@@ -3,12 +3,23 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Blog, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import { Keysho } from 'keysho';
+import 'keysho/dist/index.css';
+import ConfettiExplosion from '@reonomy/react-confetti-explosion';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]');
 }
+
+const ConfettiContainer = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 const SkipToContentLink = styled.a`
   position: absolute;
@@ -48,6 +59,17 @@ const StyledContent = styled.div`
 const Layout = ({ children, location, home }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  const [isExploding, setIsExploding] = useState(false);
+
+  const ACTION_MAP = {
+    throw_confetti: () => {
+      setIsExploding(true);
+
+      setTimeout(() => {
+        setIsExploding(false);
+      }, 3500);
+    },
+  };
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -106,8 +128,14 @@ const Layout = ({ children, location, home }) => {
               </div>
             </StyledContent>
           )}
+          {isExploding && (
+            <ConfettiContainer>
+              <ConfettiExplosion force={0.8} />
+            </ConfettiContainer>
+          )}
         </ThemeProvider>
       </div>
+      <Keysho config_uuid="9842636c-ff7b-11ec-8c11-aab15eb75f91" actionMap={ACTION_MAP} />
     </>
   );
 };
