@@ -201,9 +201,15 @@ const Nav = ({ isHome }) => {
                     </CommandBar>
                   </LogoContainer>
                 ) : (
-                  <Link to="/" aria-label="home">
-                    <IconLogo />
-                  </Link>
+                  <LogoContainer>
+                    <Link to="/" aria-label="home">
+                      <IconLogo />
+                    </Link>
+                    <CommandBar>
+                      <span>⌘</span>
+                      <span>K</span>
+                    </CommandBar>
+                  </LogoContainer>
                 )}
               </div>
             </CSSTransition>
