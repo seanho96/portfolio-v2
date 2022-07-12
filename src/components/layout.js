@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import useSound from 'use-sound';
 import { Head, Loader, Nav, Social, Blog, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { Keysho } from 'keysho';
 import 'keysho/dist/index.css';
 import ConfettiExplosion from '@reonomy/react-confetti-explosion';
+import ConfettiSound from '../../static/sounds/confetti.mp3';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -60,10 +62,12 @@ const Layout = ({ children, location, home }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
   const [isExploding, setIsExploding] = useState(false);
+  const [play] = useSound(ConfettiSound, { volume: 0.5 });
 
   const ACTION_MAP = {
     throw_confetti: () => {
       setIsExploding(true);
+      play();
 
       setTimeout(() => {
         setIsExploding(false);
