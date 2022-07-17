@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -8,6 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
+import { getOS, OS_PLATFORM } from '@utils';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -151,6 +152,7 @@ const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
+  const [isMacOS, setIsMacOS] = useState(false);
 
   // const CommandBarRef = useRef(null);
 
@@ -159,6 +161,9 @@ const Nav = ({ isHome }) => {
   };
 
   useEffect(() => {
+    const OS = getOS();
+    if (OS === OS_PLATFORM.MACOS) setIsMacOS(true);
+
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);
@@ -187,7 +192,7 @@ const Nav = ({ isHome }) => {
                     <a href="/" aria-label="home">
                       <IconLogo />
                     </a>
-                    <CommandBar
+                    {isMacOS && <CommandBar
                     // TODO: to add back when we can programatically trigger the command bar
                     // ref={CommandBarRef}
                     // onClick={() => {
@@ -198,7 +203,7 @@ const Nav = ({ isHome }) => {
                     >
                       <span>⌘</span>
                       <span>K</span>
-                    </CommandBar>
+                    </CommandBar>}
                   </LogoContainer>
                 ) : (
                   <LogoContainer>

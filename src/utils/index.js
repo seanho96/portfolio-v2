@@ -18,3 +18,34 @@ export const KEY_CODES = {
   SPACE_IE11: 'Spacebar',
   ENTER: 'Enter',
 };
+
+export const OS_PLATFORM = {
+  MACOS: 'macOS',
+  WINDOWS: 'Windows',
+  LINUX: 'Linux',
+  ANDROID: 'Android',
+  IOS: 'iOS',
+}
+
+export const getOS = () => {
+  const userAgent = window.navigator.userAgent
+  const platform = window.navigator?.userAgentData?.platform || window.navigator.platform
+  const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'MacOS']
+  const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE']
+  const iosPlatforms = ['iPhone', 'iPad', 'iPod']
+  let os = null;
+
+  if (macosPlatforms.filter((str) => str.toLowerCase().includes(platform.toLowerCase()))) {
+    os = OS_PLATFORM.MACOS;
+  } else if (iosPlatforms.filter((str) => str.toLowerCase().includes(platform.toLowerCase()))) {
+    os = OS_PLATFORM.IOS;
+  } else if (windowsPlatforms.filter((str) => str.toLowerCase().includes(platform.toLowerCase()))) {
+    os = OS_PLATFORM.WINDOWS;
+  } else if (/Android/i.test(userAgent)) {
+    os = OS_PLATFORM.ANDROID;
+  } else if (/Linux/i.test(platform)) {
+    os = OS_PLATFORM.LINUX;
+  }
+
+  return os;
+}
