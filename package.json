@@ -54,7 +54,7 @@
     "use-sound": "^5.0.0"
   },
   "devDependencies": {
-    "@netlify/plugin-gatsby": "^3.2.4",
+    "@netlify/plugin-gatsby": "^3.8.4",
     "@upstatement/eslint-config": "3.0.0",
     "@upstatement/prettier-config": "^1.1.0",
     "babel-eslint": "^10.1.0",
