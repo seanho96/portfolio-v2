@@ -132,13 +132,15 @@ const About = () => {
 
   const skills = [
     'JavaScript (ES6+)',
-    'Typescript',
-    'Next',
-    'Gatsby',
+    'TypeScript',
     'React',
-    'Formik',
-    'Styled Components',
-    'WordPress',
+    'Vue',
+    'Next.js',
+    'Nuxt.js',
+    'Gatsby',
+    'Vite / Webpack',
+    'Node.js',
+    'Tailwind CSS',
   ];
 
   return (
@@ -148,18 +150,19 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Sean, a front end developer based in Kuala Lumpur, MY.</p>
+            <p>Hello! I'm Sean, a Frontend Tech Lead based in Selangor, Malaysia.</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to build products for social good,
-              particularly in economic empowerment and helping the underprivileged.
+              I build products that live on the internet — from scalable design systems and
+              AI-powered generators to full-stack team expansions. I care deeply about performance,
+              developer experience, and shipping things that actually move the needle.
             </p>
 
             <p>
-              I'm a self taught developer whom graduated from the{' '}
-              <a href="https://www.bath.ac.uk">University of Bath</a> with a Chemical Engineering
-              Degree. Chemical engineer turned developer? That's right!
+              I graduated from the{' '}
+              <a href="https://www.bath.ac.uk">University of Bath</a> with an MEng in Chemical
+              Engineering, then pivoted into frontend development. Chemical engineer turned Tech
+              Lead? That's right!
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

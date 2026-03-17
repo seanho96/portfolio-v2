@@ -59,8 +59,8 @@ const Hero = () => {
   );
   const four = (
     <p>
-      I'm a senior front end developer passionate about building beautiful, responsive websites and
-      applications that engages and captivates its users.
+      I'm a Frontend Tech Lead who builds scalable web products, leads engineering teams, and
+      ships features that drive measurable business growth.
     </p>
   );
   const five = (
