@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
+import { createTimeline, svg } from 'animejs';
 import styled from 'styled-components';
 import { IconLoader } from '@components/icons';
 
@@ -38,7 +38,7 @@ const StyledLoader = styled.div`
 
 const Loader = ({ finishLoading }) => {
   const animate = () => {
-    const loader = anime.timeline({
+    const loader = createTimeline({
       complete: () => finishLoading(),
     });
 
@@ -48,7 +48,7 @@ const Loader = ({ finishLoading }) => {
         delay: 300,
         duration: 1500,
         easing: 'easeInOutQuart',
-        strokeDashoffset: [anime.setDashoffset, 0],
+        strokeDashoffset: [el => el.getTotalLength ? el.getTotalLength() : 0, 0],
       })
       // .add({
       //   targets: '#logo #B',
