@@ -39,7 +39,7 @@ const StyledLoader = styled.div`
 const Loader = ({ finishLoading }) => {
   const animate = () => {
     const loader = createTimeline({
-      complete: () => finishLoading(),
+      onComplete: () => finishLoading(),
     });
 
     loader
